@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Komvux Prime Sweden</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Kaushan+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Kaushan+Script" rel="stylesheet">
+    <a href="https://icons8.com/icon/23175/add-shopping-cart-filled"></a>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="top">
+                <nav class="navbar navbar-expand-lg navbar-dark  ">
+                  <a href="#" class="navbar-brand text-light">MegaStore</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive-nav">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <form class="form-inline md-form mr-4 mb-4">
+                        <input  class="form-control  searchbox-input mr-sm-5 mt-3" id="myFilter" type="search" placeholder="Search" aria-label="Search" onkeyup="" >
+                       
+                      </form>
+                  <div class="collapse navbar-collapse" id="responsive-nav">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item"><a href="#" class="nav-link text-light"> HOME</a></li>
+                      <li class="nav-item"><a href="#cart" class="nav-link text-light"><img src="https://img.icons8.com/office/16/000000/gender-neutral-user.png"></a></li>
+                      <li class="nav-item"><a href="#Product" class="nav-link text-light">PRODUCTS</a></li>
+                      <li class="nav-item"><a href="#cart" class="nav-link text-light">CART</a></li>
+                      
+                    </ul>
+                  </div>
+                </nav>
+                </div>
+                <main>
+                    <!--Categories-->
+                    <section>
+                            <div class="container">
+                                          <div class="row" id="Product">
+                                              <div class="col-md-8 justify-content-center">
+                                                  <h2 class="product mt-3"> Products</h2>
+                                                  <button id="byPrice" onclick="sort(this.id)">sort by price</button>   
+                                                  <div class="product-list">
+                               
+                               
+                                                  </div>
+                                                  <br>
+                                              </div>
+                                                  <div class="col-sm-6 col-md-4" id="shopping-cart">
+                                                          <h2 class="cart text-center mt-3" id="cart"><img src="https://img.icons8.com/ios/50/000000/add-shopping-cart-filled.png"></a></h2>
+                                                          <h4 class="mt-4">Total items : <span class="amount"></span></h4>
+                                                          <ul class="cart-list list-unstyled inline-item">
+                                          
+                                                              </ul>
+                                                  </div>
+                                              </div>
+                                          </div>
+                               
+                               
+                                          <br>
+                               
+                               
+                                  </section>
+                                 
+                                  <!--Social-->
+                                  <section class="social bg-darken">
+                                        <div class="container ">
+                                          <div class="row icons webkit-flex ml-5">
+                                  
+                                            <!-- Facebook -->
+                                            <a href="#" class="social-link col-md-3 col-6">
+                                                    <img src="https://img.icons8.com/color/16/000000/facebook.png">
+                                              <span class="social-name">facebook</span>
+                                            </a>
+                                  
+                                            <!-- Twitter -->
+                                            <a href="#" class="social-link col-md-3 col-6">
+                                                    <img src="https://img.icons8.com/color/16/000000/twitter.png">
+                                              <span class="social-name">twitter</span>
+                                            </a>
+                                  
+                                            <!-- Youtube -->
+                                            <a href="#" class="social-link col-md-3 col-6">
+                                                    <img src="https://img.icons8.com/color/16/000000/youtube-play.png">
+                                              <span class="social-name">youtube</span>
+                                            </a>
+                                  
+                                            <!-- Instagram -->
+                                            <a href="#" class="social-link col-md-3 col-6">
+                                                    <img src="https://img.icons8.com/office/16/000000/instagram-new.png">
+                                              <span class="social-name">instagram</span>
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </section>
+                                  
+
+                                  
+            <footer class="">
+                    <div class="container">
+                      <span class="copy text-muted ml-1">Copyright-Komvux Ltd AB</span>
+              
+              
+              
+                      <span class="d-flex justify-content-end text-muted">Made with <i class="fas fa-heart-broken"></i> By Deepthy</span>
+                    </div>
+                  </footer>
+                </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+      $("#myFilter").on("keyup", function() {
+       $(value).html('');
+    
+        var value = $(this).val().toLowerCase();
+        $(".card *").filter(function() {
+         
+         $(this).toggle($(this).html().toLowerCase().indexOf(value) > -1) 
+           
+        });
+      });
+    });  
+    </script>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+crossorigin="anonymous"></script>
+<script src="app.js"></script>      
+</body>
+</html>
